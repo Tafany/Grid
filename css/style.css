@@ -1,0 +1,273 @@
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Anybody', cursive;
+
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* Grid Geral */
+
+.estrutura {
+  background: rgb(229, 229, 229);
+  background: linear-gradient(180deg, rgba(229, 229, 229, 1) 0%, rgba(241, 219, 218, 1) 27%, rgba(207, 189, 191, 1) 73%, rgba(207, 189, 191, 1) 84%, rgba(229, 229, 229, 1) 100%);
+
+  display: grid;
+  grid-template-columns: minmax(160PX, 1fr) 3fr 300px;
+  grid-template-areas:
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer";
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #f1396d, #fbc5d8);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  max-width: 12.5rem;
+  filter: drop-shadow(0 3px 4px #000000);
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* após o outro */
+/* .header li+li {
+  margin-left: 2rem;
+} */
+
+header nav a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.125em;
+  color: white;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, .1);
+  transition: 0.1s;
+}
+
+.header nav a:hover {
+  background: rgba(0, 0, 0, .5);
+
+}
+
+/* sideNav */
+.sidenav {
+  grid-area: sidenav;
+  padding: 2rem;
+  /* background: #e5e5e5; */
+
+}
+
+.sidenav li a {
+  display: block;
+  min-width: 3.75rem;
+  max-width: 10.25rem;
+  /* max-width: 100%; */
+  margin: 0 auto 2rem;
+  padding: 20px;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: .1s ease-out;
+}
+
+.sidenav li a:hover {
+  background: #fbc5d8;
+}
+
+/* Content*/
+.content {
+  grid-area: content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* colo -1, porque ele pegará de ponta a ponta */
+.col-wite {
+  grid-column: 1/-1;
+}
+
+/* Quero que expanda por duas linhas*/
+.img-one {
+  grid-row: span 2;
+  align-self: flex-end;
+}
+
+.item-2 {
+  align-self: flex-end;
+}
+
+p {
+  font-size: 1.2em;
+  letter-spacing: -0.005em;
+  line-height: 1.6;
+  color: whitesmoke;
+  filter: drop-shadow(1px 1px 1px #676767);
+}
+
+.informacoes p+p {
+  margin: 2rem 0 0;
+}
+
+/* Titulo */
+.titulo {
+  color: #f1396d;
+
+
+}
+
+.titulo h1 {
+  font-size: 3.75em;
+  line-height: 1;
+  font-weight: 600;
+
+}
+
+.titulo span {
+  font-size: 1.4em;
+  font-style: italic;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Caracteristica */
+.caract {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.caract>div {
+  width: 5rem;
+  background: linear-gradient(135deg, #e8608c, #fbc5d8);
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+
+}
+
+/* estou falando somente com a primeira div */
+.caract-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.numero {
+  color: #fbc5d8;
+  font-size: 3em;
+  line-height: 1;
+  margin: 1rem auto;
+}
+
+.rotulo {
+  background: #FFFF;
+  border-radius: 0 0 5px 5px;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: 700;
+  color: #fbc5d8;
+}
+
+.destaque {
+  color: #e8608c;
+  font-size: 1.2em;
+  max-width: 16em;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  filter: unset;
+}
+
+.caract-content:hover .numero {
+  color: #f1396d;
+}
+
+.citacao,
+.atributos {
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  background: linear-gradient(135deg, #e8608c, #fbc5d8);
+  color: white;
+  align-self: flex-start;
+}
+
+.citacao p {
+  text-align: center;
+  font-size: 1.5em;
+  font-style: oblique;
+
+}
+
+.atributos li {
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+  padding: 1rem;
+
+}
+
+/* Quero falar com li, que vem após um li */
+.atributos li+li {
+  border-top: 2px solid #fbc5d8;
+}
+
+
+/* Anuncios */
+.anuncios {
+  grid-area: anuncios;
+  /* background: #fafbfc; */
+  display: grid;
+  align-content: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* footer */
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #e8608c, #fbc5d8);
+}
+
+.footer {
+  text-align: center;
+  color: white;
+}
