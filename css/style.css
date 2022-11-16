@@ -120,6 +120,7 @@ header nav a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
 }
 
 /* colo -1, porque ele pegará de ponta a ponta */
@@ -250,6 +251,10 @@ p {
   border-top: 2px solid #fbc5d8;
 }
 
+.wolf {
+  display: flex;
+  justify-content: center;
+}
 
 /* Anuncios */
 .anuncios {
@@ -270,4 +275,60 @@ p {
 .footer {
   text-align: center;
   color: white;
+}
+
+
+/* @media responsivo*/
+@media(max-width:1200px) {
+  .estrutura {
+    grid-template-areas:
+      "header header header"
+      "sidenav content content"
+      "sidenav anuncios anuncios"
+      "footer footer footer"
+  }
+}
+
+@media (max-width:760px) {
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "anuncios"
+      "footer";
+  }
+
+  .sidenav li a {
+    margin: unset;
+  }
+
+  .header {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 0 0 20px;
+  }
+
+  .header nav a {
+    font-size: 1em;
+  }
+
+  .sidenav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sidenav ul li {
+    flex: 1 0 3.75rem;
+
+  }
+
+  .sidenav {
+    padding: 0 1rem;
+    margin: 30px 30px 30px 0;
+  }
 }
