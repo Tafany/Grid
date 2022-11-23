@@ -277,6 +277,22 @@ p {
   color: white;
 }
 
+/* ---------cropperjs */
+.container {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.group_img img {
+  width: 800px;
+  height: 500px;
+}
+
+#output {
+  margin: 0 6px;
+}
 
 /* @media responsivo*/
 @media(max-width:1200px) {
