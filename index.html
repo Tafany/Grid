@@ -5,13 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;700&display=swap"
-    rel="stylesheet">
+
+  <link rel="stylesheet" href="./node_modules/cropperjs/dist/cropper.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css"
-    integrity="sha512-C4k/QrN4udgZnXStNFS5osxdhVECWyhMsK1pnlk+LkC7yJGCqoYxW4mH3/ZXLweODyzolwdWSqmmadudSHMRLA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Wildbeast</title>
 </head>
 
@@ -91,7 +87,7 @@
         <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O
           sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p>
       </div>
-      <div class="wolf col-wite">
+      <!-- <div class="wolf col-wite">
         <img id="image" src="/components/imgs/wolf3.jpg" alt="3 lobos">
 
         <div class="form_user_cropper_preview">
@@ -100,9 +96,8 @@
         <div class="form_user_action">
           <button class="byn j_cropper_generate_thumb">Gerar Arquivo</button>
         </div>
-      </div>
+      </div> -->
     </main>
-
     <aside class="anuncios">
       <div class="anuncio-item"><img src="/components/imgs/anuncio-1.jpg" alt="anuncio 1"></div>
       <div class="anuncio-item"><img src="/components/imgs/anuncio-2.jpg" alt="anuncio 2"></div>
@@ -111,12 +106,21 @@
     <footer class="footer">
       <p>Meinels Sistemas © 2022. Alguns direitos reservados.</p>
     </footer>
-
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.js"
-    integrity="sha512-LjPH94gotDTvKhoxqvR5xR2Nur8vO5RKelQmG52jlZo7SwI5WLYwDInPn1n8H9tR0zYqTqfNxWszUEy93cHHwg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div class="container">
+
+    <div class="group_img">
+      <img id="image" src="/components/imgs/wolf3.jpg" alt="3 lobos">
+      <button id="cropImageBtn">Crop Image</button>
+    </div>
+
+    <img src="" id="output">
+  </div>
+
+
+
+  <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
   <script src="/js/index.js"></script>
 </body>
 
