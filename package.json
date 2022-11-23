@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cropperjs": "^1.5.13"
+  },
+  "name": "grid",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tafany/Grid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tafany/Grid/issues"
+  },
+  "homepage": "https://github.com/Tafany/Grid#readme"
+}
