@@ -37,8 +37,8 @@ document.getElementById('cropImageBtn').addEventListener('click', function () {
   let cropperImage = cropper.getCroppedCanvas().toDataURL('image/png');
 
   //alert para ver se o btn, está funcionando.
-  alert(cropperImage);
+  // alert(cropperImage);
 
-  // document.getElementById('output').src = cropperImage;
+  document.getElementById('output').src = cropperImage;
 
 });
